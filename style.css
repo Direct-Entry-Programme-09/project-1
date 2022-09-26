@@ -1,0 +1,130 @@
+@import url(/css/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Comfortaa:wght@400;700&family=Open+Sans:wght@400;500&family=Oswald:wght@200;300;400&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Source+Serif+Pro:wght@300;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+ *{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+ }
+
+.clear-fix{
+    clear: both;
+ }
+ /*Typhography*/
+ h1{
+    font-size: 1.8rem;
+    line-height: 2rem;
+ }
+ h2{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+ }
+ h3{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+ }
+ h4{
+    font-size: 1rem;
+    line-height: 1.3rem;
+ }
+ h5{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+ }
+ h6{
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+ }
+
+ /*Layout*/
+ :root{
+    --header-height:50px;
+    --nav-width:150px;
+    --layout-border-color:lightgray;
+ }
+ #header{
+    background-color: rebeccapurple;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:var(--header-height);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid var(--layout-border-color);
+ }
+ #header img{
+    height: 30px;
+    width: 150px;
+ }
+ #nav{
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: var(--nav-width);
+    border-right: 1px solid var(--layout-border-color);
+ }
+
+ #main{
+    
+    margin-left: var(--nav-width);
+    margin-top: var(--header-height);
+   
+ }
+ #footer{
+    text-align: center;
+    padding: 10px 10px 15px ;
+    border-top: 1px solid var(--layout-border-color);
+ }
+ #smi-container{
+    float: right;
+    height: var(--header-height);
+    padding-right: 10px;
+ }
+ #smi-container .smi-icons{
+    float: left;
+    height: 100%;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: background-color 600ms, width 500ms;
+    font-weight: 500;
+    width: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+ }
+ #smi-container .smi-icons:first-child:hover{
+    background-color: rgb(18, 18, 58);
+ } 
+ #smi-container .smi-icons:nth-child(2):hover{
+    background-color: rgb(47, 56, 179);
+ } 
+ #smi-container .smi-icons:nth-child(3):hover{
+    background-color: rgb(58, 186, 224);
+ } 
+ #smi-container .smi-icons:nth-child(4):hover{
+    background-color: rgb(18, 57, 131);
+ } 
+ #smi-container .smi-icons:nth-child(5):hover{
+    background-color: rgb(207, 26, 26);
+ }
+ #smi-container .smi-icons:nth-child(6):hover{
+    background-color: rgb(72, 82, 66);
+ }
+ #smi-container .smi-icons:nth-child(7):hover{
+    background-color: rgb(63, 14, 141);
+ }
+ #smi-container .smi-icons:not(.smi-icons:last-child){
+    border-right: 1px solid var(--layout-border-color);
+ }
+
+ #smi-dontainer .smi-icons ion-icons{
+    font-size: 1.3rem;
+    color: #666;
+    padding-right: 10px;
+    vertical-align: sub;
+ }
+ #smi-container .smi-icons:hover{
+    color: white;
+    width: 120px;
+    
+ }
