@@ -9,6 +9,9 @@
 .clear-fix{
     clear: both;
  }
+ ul{
+    list-style: none;
+ }
  /*Typhography*/
  h1{
     font-size: 1.8rem;
@@ -128,3 +131,70 @@
     width: 120px;
     
  }
+ /*Navigation*/
+ .sub-menue ul{
+    display: none;
+ }
+ 
+ #nav ul li{
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid var(--layout-border-color);
+ }
+ #nav ul li:hover{
+    border-left: 3px solid red;
+ }
+ #nav ul li:hover>span{
+    background-color: #d3d3d3;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    
+    
+ }
+ #nav ul li span{
+    /* transition: margin-left .4s cubic-bezier(0.3,-0.07, 0.79, 2.15); */
+    transition-property: margin-left;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.3,-0.07, 0.79, 2.15);
+    background-color: white;
+ }
+ .sub-menue{
+    position: relative;
+ }
+ .sub-menue:hover::after{
+    border-left-color: red;
+
+ }
+ .sub-menue::after{
+    display: block;
+    content: "";
+    border-left: 5px solid rebeccapurple;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ .sub-menue ul{
+    display: none;
+    background-color: white;
+    border-top: 1px solid var(--layout-border-color);
+    border-bottom: 1px solid var(--layout-border-color);
+    min-width: 230px;
+    box-shadow: 4px 2px 3px 1px black;
+ }
+ ul>.sub-menue:nth-child(2) ul{/*>inside this*/
+    /*line-height: 1.2rem;/*space between lines*/
+    width: 370px;
+ }
+
+.sub-menue:hover>ul{
+    display: block;
+    position: absolute;
+    left: calc(100% + 1px);/*to do calculations simpley*/
+    top: 0;
+}
+
